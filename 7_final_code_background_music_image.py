@@ -123,14 +123,14 @@ class Game:
 
         # snake eating apple scenario
         if self.is_collision(self.snake.x[0], self.snake.y[0], self.apple.x, self.apple.y):
-            self.play_sound("ding")
+            
             self.snake.increase_length()
             self.apple.move()
 
         # snake colliding with itself
         for i in range(3, self.snake.length):
             if self.is_collision(self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]):
-                self.play_sound('crash')
+                
                 raise "Collision Occurred"
 
     def display_score(self):
